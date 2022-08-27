@@ -7,41 +7,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Zay Store</title>
+  <title>Admin EStore</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{url('public')}}/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{ url('public') }}/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{url('public')}}/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{ url('public') }}/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
   <!-- Navbar -->
-  @include('template.section.header')
+  @include ('template.section.header')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('template.section.sidebar')
+  @include ('template.section.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-          @yield('content')
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+         
         </div>
       </div>
     </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-  
+    <div class="container">
+      <div class="row">
+        <div class="col md-12">
+          @include('template.utils.notif')
+        </div>
+      </div>
+    </div>
+    @yield ('content')
   </div>
   <!-- /.content-wrapper -->
 
@@ -56,17 +57,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
-  @include('template.section.footer')
-</div>
+  @include ('template.section.footer')
+  </div>
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="{{url('public')}}/plugins/jquery/jquery.min.js"></script>
+<script src="{{ url('public') }}/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="{{url('public')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url('public') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="{{url('public')}}/dist/js/adminlte.min.js"></script>
+<script src="{{ url('public') }}/dist/js/adminlte.min.js"></script>
 </body>
 </html>
